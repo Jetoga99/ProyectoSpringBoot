@@ -6,12 +6,16 @@ import java.util.Date;
 import javax.servlet.ServletException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.knifeserviceit.knifeservicedb.jwt.config.JwtFilter;
@@ -31,15 +35,14 @@ private final DesarrolladorService desarrolladorservice;
 		super();
 		this.desarrolladorservice = desarrolladorservice;
 		}
-@PutMapping
-public Token Iniciar_Sesion (@RequestParam(required=true) String Email, @RequestParam(required=true) String Contraseña) throws ServletException{
-	System.out.println(Email);
-	if (desarrolladorservice.autenticador_dev(Email, Contraseña )) {
-		return new Token(generateToken(Email));
+
+@PostMapping
+public Token Iniciar_Sesion (@RequestBody  Desarrollador desa) throws ServletException{
+	if (desarrolladorservice.autenticador_dev(desa)) {
+		return new Token(generateToken(desa.getEmail()));
 		
-	}//if autenticador 
+	} //if autenticador 
 	throw new ServletException("nombre de usuario o contraseña Incorrectos");
-	
 }//cierre Token Iniciar Sesion
 	
 private String generateToken(String desarrollador) {
@@ -50,5 +53,17 @@ private String generateToken(String desarrollador) {
 			.signWith(SignatureAlgorithm.HS256, JwtFilter.secret).compact();
 }//generador de token
 	
+@PutMapping //http://localhost:8080/api/desarrollador/1
+public Desarrollador getDeveloper(@RequestBody Desarrollador desa ) throws ServletException {
+	if (desarrolladorservice.ExisteONo(desa)) {
+		return desa;	
+	}
+	
+	throw new ServletException("no Existe aun");
+
+}//this function gets the specified id data
+
+
+
 	
 }//cierre clase inicio_sesion

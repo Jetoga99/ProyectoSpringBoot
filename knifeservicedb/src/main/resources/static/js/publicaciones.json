@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Diseño de Páginas Web",
+        "img": "../src/dweb.jpg",
+        "price": 15000,
+        "description": "En IT Knife nos especializamos en servicio de creación y desarrollo de páginas web, Diseñadores profesionales, todos calificados y evaluados, contamos con decenas de diseños de páginas web para explorar, El diseño gráfico de una página web se concreta en alrededor de una semana. Tus archivos en alta calidad y en todos los formatos que necesites, además del copyright del diseño. Si tu diseño no te enamora te devolvemos el dinero, así de fácil."
+    },
+    {
+        "id": 2,
+        "name": "Diseño de Aplicaciones Móviles",
+        "img": "../src/deapp.jpg",
+        "price": 18000,
+        "description": "En IT Knife nos especializamos en el desarrollo de aplicaciones móviles (apps) Android, IOS y Web. Te ayudamos a analizar la solución y el modelo de negocio. Encontremos el modelo ideal para que tu aplicación móvil o web sea un éxito. Nuestro equipo siempre estará disponible para tu desarrollo. Somos especialistas en desarrollo de aplicaciones móviles, te aseguramos darte 3 ideas que complementen tu solución. Nuestra solución estará enfocada en que puedas vender mucho o bien soluciones un problema que te ahorre dinero. Dentro de tu proyecto participarán Programadores back end, programadores front end, Expertos en Experiencia de Usuario, diseñadores gráficos y un project manager."
+    },
+    {
+        "id": 3,
+        "name": "Diseño Base de Datos",
+        "img": "../src/bd.jpg",
+        "price": 8500,
+        "description": "IT Knife le ofrece la gama más amplia de bases de datos personalizadas que le permite ahorrar, crecer e innovar con rapidez. Obtenga bases de datos relacionales que son de 3 a 5 veces más rápidas que las alternativas populares, o bases de datos no relacionales que le brindan una latencia de microsegundos a submilisegundos. IT Knife monitorea continuamente los clústeres para mantener las cargas de trabajo en funcionamiento con almacenamiento de recuperación automática y escalado automático, para que pueda centrarse en el desarrollo de aplicaciones. Las bases de datos de IT Knife están diseñadas para admitir cargas de trabajo empresariales de gran importancia y ofrecen alta disponibilidad, fiabilidad y seguridad. "
+    },
+    {
+        "id": 4,
+        "name": "Mantenimiento de Sistemas",
+        "img": "../src/mans.jpg",
+        "price": 9000,
+        "description": "IT Knife le ofrece Mantenimiento al día de tus activos físicos digitales y servidores. Nunca más te tendrás que preocupar por contratiempos. Reduciendo costos, ahorrando tiempos e incrementando la productividad con nuestros servicios de soporte técnico. Soporte a tus usuarios de tecnología por un equipo multidisciplinario a tu disposición, arquitectura de hardware y software requerido. Nos encargamos también del trato con tus proveedores."
+    },
+    {
+        "id": 5,
+        "name": "Actualización de Proyectos",
+        "img": "../src/actproy.jpg",
+        "price": 12000,
+        "description": "IT Knife te ofrece desarrollo y actualización de proyectos, si tienes en mente un nuevo proyecto de software o necesitas escalar uno que ya tienes, nuestro equipo de desarrolladores esta hecho a tu medida. Trabajamos contigo para transformar tu idea en un proyecto funcional, aprender lo que tienes, lo que quieres y lo que necesitas de manera integral. Desarrollamos tu aplicación web de manera que sea atractiva, rápida y segura diseñada exclusivamente para alcanzar tus objetivos comerciales. Al mismo tiempo Fortalecemos tu negocio con nuestros talentos. Te proporcionamos a los mejores candidatos para satisfacer las demandas de tu proyecto."
+    },
+    {
+        "id": 6,
+        "name": "Asesoría Técnica",
+        "img": "../src/asesortec.jpg",
+        "price": 5000,
+        "description": "En IT KNIFE brindamos atención y soporte especializada al cliente y a sus necesidades técnicas, siempre dispuestos a resolver cualquier problema en la menor cantidad de tiempo requerido, contamos con colaboradores altamente especializados y con experiencias en el área técnica."
+    },
+    {
+        "id": 7,
+        "name": "Creación de Sistemas de Cómputo",
+        "img": "../src/creasis.jpg",
+        "price": 5000,
+        "description": "En IT KNIFE tenemos ingenieros especializados en hardware y software que tienen conocimiento en diseños de dispositivos de entrada, salida y son muy capaces de crear nuevos sistemas de cómputo, confía en nosotros. Nos enfocamos en brindar la mejor experiencia de usuario, transmitiendo tus necesidades y gustos requeridos."
+    },
+    {
+        "id": 8,
+        "name": "Diseño UX/UI",
+        "img": "../src/disux.jpg",
+        "price": 5000,
+        "description": "IT KNIFE tiene personas especializadas en el diseño de planificar y optimizar tanto la interfaz, la parte visual, como la experiencia la parte racional de un producto o servicio, trabajando arduamente en el resultado final de lo que se visualiza."
+    },
+    {
+        "id": 9,
+        "name": "Cotización de Proyectos",
+        "img": "../src/cotproy.jpg",
+        "price": 5000,
+        "description": "Cotizamos proyectos pequeños, medianos y a gran escala. Teniendo en cuenta las necesidades del cliente, presupuesto y tiempo. Siempre pensando en la mejora continua de este para que, al finalizar el proyecto, siempre se cuente con la habilidad de implementar nuevas funciones cuando el cliente lo requiera."
+    },
+    {
+        "id": 10,
+        "name": "Diseño Gráfico",
+        "img": "../src/disgra.jpg",
+        "price": 5000,
+        "description": "IT KNIFE cuenta con diseñadores marketing que siempre verán para sacar mayor provecho hacia tus publicaciones y que estos sean reflejados de una manera concisa además de una manera correcta para atraer a sus clientes. Desde logos, flyers, slogans, diseños variados."
+    }
+]

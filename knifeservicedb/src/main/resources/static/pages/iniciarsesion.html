@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="icon" href="../src/logo.ico">
+    <script src="https://kit.fontawesome.com/8a76b94897.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/fd5785194c.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body class="bodyregistro">
+    <header>
+        <main>
+            <div class="container" id="nav"></div>
+    </header>
+    <br><br><br>
+    <div class="container">
+        <h1 class="registroh1">Iniciar Sesión</h1>
+        <br>
+        <form class="offset-lg-3 formulario">
+
+            <div class="form-group col-md-8 divregistro">
+                <label for="exampleInputEmail1"><i class="fa-solid fa-envelope"></i> Dirección de correo
+                    electrónico</label><br>
+                <input placeholder="Dirección de correo electrónico " type="email" class="form-control" id="inputEmail"
+                    aria-describedby="emailHelp" />
+                <div id="EmailWarn"></div>
+            </div>
+            <div class="form-group col-md-8 divregistro">
+                <label for="inputPassword1"><i class="fa-solid fa-lock"></i> Contraseña
+                </label><br>
+                <input placeholder="Contraseña" maxlength="20" , minlength="5" type="password" class="form-control"
+                    id="inputPassword1" />
+                <div class="divregistro" id="passwordAlert"></div>
+                <br>
+                <div class="text-center btn divregistro" style="width: 100%;display: block;">
+                    <button id="btn_submit" type="submit">Iniciar Sesión</button>
+                </div><br><br><br><br>
+
+            </div>
+
+        </form>
+
+    </div>
+    </main>
+    <footer class="footer">
+
+    </footer>
+    <script src="/js/iniciarsesion.js"></script>
+
+    <script src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

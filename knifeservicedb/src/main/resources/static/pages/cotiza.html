@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="icon" href="../src/logo.ico">
+    <title>Cotización</title>
+    <link rel="stylesheet" href="../css/style_cotiza.css"><!-- aqui linkieamos nuestra hoja de estilo -->
+</head>
+
+<body>
+
+    <main class="container">
+        <!-- Aqui insertaremos todo lo que ira en el cuerpo de la pagina con la etiqueta Main -->
+        <div class="card text-center">
+            </nav>
+            <div class="card-body">
+                <h1 class="cotizah1">Cotización</h1>
+            </div>
+        </div>
+        <br><br>
+        <section class="container seccion">
+            <!-- Aqui designamos todo lo que ira en la sección -->
+            <form action="" class="formulario" id="formulario">
+                <div class="form-row">
+                    <!-- la clase row se refiere al número de filas o reglones que tendrá el form -->
+                    <div class="form-group col-md-6">
+                        <!-- la clase col se refiere al número de columnas que tendrá el input -->
+                        <label for="inputName">Ingrese su Nombre</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Nombre Completo"
+                            title="Es Necesario que Ingrese su nombre">
+                        <!-- el for y el id deben de coincidir para poder conectarse y el placeholder se usa para dejar un mensaje
+                            para ayudar al usario por el autocompletado de los divs y el type debe de ser el correcto para lo que requieramos-->
+                    </div>
+                    <div class="form-group col-md-6">
+                        <!-- la clase col se refiere al número de columnas que tendrá el input -->
+                        <label for="inputCorreo">Ingrese su Correo</label>
+                        <input type="email" class="form-control" id="inputCorreo" placeholder="@ Correo">
+                        <!-- el for y el id deben de coincidir para poder conectarse y el placeholder se usa para dejar un mensaje
+                            para ayudar al usario por el autocompletado de los divs y el type debe de ser el correcto para lo que requieramos-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <!-- la clase col se refiere al número de columnas que tendrá el input -->
+                        <label for="inputTel">Ingrese su Número de teléfono</label>
+                        <input type="number" class="form-control" id="inputTel" placeholder="# Teléfono">
+                        <!-- el for y el id deben de coincidir para poder conectarse y el placeholder se usa para dejar un mensaje
+                        para ayudar al usario por el autocompletado de los divs y el type debe de ser el correcto para lo que requieramos-->
+                    </div>
+                    <div class="form-group col-md-3">
+                        <!-- la clase col se refiere al número de columnas que tendrá el input -->
+                        <label for="inputCodPost">Código Postal</label>
+                        <input type="number" class="form-control" id="inputCodPost" placeholder="# Código Postal">
+                        <!-- el for y el id deben de coincidir para poder conectarse y el placeholder se usa para dejar un mensaje
+                        para ayudar al usario por el autocompletado de los divs y el type debe de ser el correcto para lo que requieramos-->
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputServ">¿Qué servicio Requiere?</label>
+                        <select id="inputServ" class="form-control" multiple>
+                            <option selected>Selecciona una opción...</option>
+                            <!--                             <option value="15000">Diseño de Páginas Web</option>
+                            <option value="18000">Diseño de Aplicaciones Móviles</option>
+                            <option value="8500">Diseño Base de Datos</option>
+                            <option value="9000">Mantenimiento de Sistemas</option>
+                            <option value="12000">Actualización de Proyectos</option>
+                            <option value="5000">Asesoría Técnica </option>
+                            <option value="5000">Creación de Sistemas de Cómput </option>
+                            <option value="5000">Diseño UX/UI</option>
+                            <option value="5000">Cotización de Proyectos</option>
+                            <option value="5000">Diseño Gráfico</option> -->
+                        </select>
+                        <!-- Value indicara el valor que contendra cada option -->
+                    </div>
+                </div><!-- row -->
+                <!-- <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputUrgente">¿Requiere un Trabajo Urgente? </label>
+                        <select id="inputUrgente" class="form-control">
+                            <option selected>Selecciona una opción...</option>
+                            <option value="*2">Sí</option>
+                            <option value="">No</option>
+                        </select> -->
+                <!-- Value indicara el valor que contendra cada option -->
+                <!-- </div>
+                </div> -->
+                <!-- row -->
+                <!--  <div class="form-group col-md-4"> -->
+                <!-- la clase col se refiere al número de columnas que tendrá el input -->
+                <!-- <label for="inputDias">¿En cuantos días requiere el trabajo? </label>
+                    <input type="number" class="form-control" id="inputDias"
+                        placeholder="# Indique el número de Días  "> -->
+                <!-- el for y el id deben de coincidir para poder conectarse y el placeholder se usa para dejar un mensaje
+                    para ayudar al usario por el autocompletado de los divs y el type debe de ser el correcto para lo que requieramos-->
+                <!-- </div> -->
+                <!-- Queda pendiente agregar estas areas -->
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="checkIVA">
+                        <label class="form-check-label" for="checkIVA">
+                            Costo más I.V.A.
+                        </label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text-center">
+                        <button id="btnCotiza" type="submit"><i class="fas fa-paper-plane btnenviar"></i><span>
+                                Cotizar</span></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" id="AlertMessage">
+                        <!--codigo para corregir mala entrada de Mensaje-->
+                    </div>
+                </div>
+                <!-- <button type="button" class="btn btn-primary" id="btnCotiza">Cotizar</button> -->
+            </form>
+        </section>
+        <section class="container seccion">
+
+            <div class="card cot">
+                <div class="card-header subt">
+                    Está es tu Cotización:
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" id="tiuloCard"></h5>
+                    <p class="card-text" id="textCard"></p>
+                </div>
+            </div><!-- card -->
+        </section>
+    </main>
+    <script src="../js/cotiza.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
