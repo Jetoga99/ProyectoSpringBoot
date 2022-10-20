@@ -59,20 +59,33 @@ public Desarrollador updateDeveloper(Long Id , String Nombre, String Apellidos,
 	
 }//update developer data
 
-public boolean autenticador_dev(String email, String password) {
+public boolean autenticador_dev(Desarrollador desa) {
 	boolean outcome = false ;
-	Optional<Desarrollador> developerByEmail = desarrolladorRepository.findByEmail(email);
+	Optional<Desarrollador> developerByEmail = 
+	desarrolladorRepository.findByEmail(desa.getEmail());
+	
 	if (developerByEmail.isPresent()) {
 		Desarrollador dev = developerByEmail.get();
-		if (dev.getContraseña().equals(password)) {
+		if (dev.getContraseña().equals(desa.getContraseña())) {
 			outcome = true;
 		}//if passwords are equals
 		
-	}else {
-		System.out.println(password);
-	}//if developerbyemail exist
+	}
 	return outcome;
 }//fin clse de autenticador
+
+
+public boolean ExisteONo(Desarrollador desa) {
+	boolean outcome = false ;
+	Optional<Desarrollador> developerByEmail = 
+	desarrolladorRepository.findByEmail(desa.getEmail());
+	if (developerByEmail.isPresent()) {
+			outcome = true;
+	}
+	return outcome;
+}//fin clse de autenticador de existencia 
+
+
 
 
 public Desarrollador Change_Password(Long id, String Password, String NewPassword) {
