@@ -19,10 +19,16 @@ public class JwtFilter extends GenericFilterBean {
 	 throws IOException, ServletException{
 		 HttpServletRequest httpServletRequest = (HttpServletRequest) request;
 		 String authHeader = httpServletRequest.getHeader("authorization");
-		 if(("POST".equals(httpServletRequest.getMethod()))|| (("GET".equals(httpServletRequest.getMethod()))&&
-				 (! httpServletRequest.getRequestURI().contains("/api/proyecto/"))&&
-				 (! httpServletRequest.getRequestURI().contains("/api/servicios/"))&&
-				 (! httpServletRequest.getRequestURI().contains("/api/proyecto_servicios/")))||
+		 if((("POST".equals(httpServletRequest.getMethod()))&&
+				 ((! httpServletRequest.getRequestURI().contains("/api/proyecto/"))&&
+						 (! httpServletRequest.getRequestURI().contains("/api/desarrollador/"))&&
+						 (! httpServletRequest.getRequestURI().contains("/api/proyecto_servicios/"))))
+				 
+				 || (("GET".equals(httpServletRequest.getMethod()))&&
+				 ((! httpServletRequest.getRequestURI().contains("/api/proyecto/"))&&
+				(! httpServletRequest.getRequestURI().contains("/api/servicios/"))&&	 
+				 (! httpServletRequest.getRequestURI().contains("/api/desarrollador/"))&&
+				 (! httpServletRequest.getRequestURI().contains("/api/proyecto_servicios/"))))||
 				 ("PUT".equals(httpServletRequest.getMethod() ))||
 				 ("DELETE".equals(httpServletRequest.getMethod())))
 		 {

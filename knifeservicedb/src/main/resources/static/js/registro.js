@@ -176,12 +176,13 @@ btn.addEventListener("click", async function (e) {
 											  method: 'POST', // or 'PUT'
 											  headers: {
 											    'Content-Type': 'application/json',
-											    'Authorization': 'Bearer: ' + localStorage.getItem("Token")
+											   
 									  },
 									  body: JSON.stringify(data),
 									})
 									  .then((response) => response.json())
 									  .then((data) => {
+										if(data.nombre!=null){
 										console.log('Success:', data);
 										  Swal.fire({
 									      position: 'center',
@@ -189,20 +190,20 @@ btn.addEventListener("click", async function (e) {
 									      title: '¡Tus datos han sido guardados exitosamente¡',
 									      showConfirmButton: false,
 									      timer: 1500
-							    })
-										
-										
-										
+											})//sweet alert
+									    	document.getElementById("inputEmail").value = "";
+										    document.getElementById("inputName").value = "";
+										    document.getElementById("phoneNumber").value = "";
+										    document.getElementById("inputPassword2").value = "";
+										    document.getElementById("inputPassword1").value = "";
+										  }
+									
 									  })
 									  .catch((error) => {
 									    console.error('Error:', error);
 									  });  
 									
-						    document.getElementById("inputEmail").value = "";
-						    document.getElementById("inputName").value = "";
-						    document.getElementById("phoneNumber").value = "";
-						    document.getElementById("inputPassword2").value = "";
-						    document.getElementById("inputPassword1").value = "";
+						 
 			
   						}//if validacion general
 				
