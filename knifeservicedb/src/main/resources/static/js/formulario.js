@@ -6,12 +6,12 @@ let precio = document.getElementById("price");
 let descripcion = document.getElementById("descripcion");
 let imagen = document.querySelector("#file");
 let btnFake = document.getElementById('btnFake');
-
+imagen.value='';
 let img = " ";
 let cont = 1;
 //let listaServicios = [];
 const key = "Serv";
-let image;
+let image=null;
 let prev = document.getElementById("preview");
 
 btnFake.addEventListener("click", function (e) {
@@ -26,8 +26,9 @@ submit_btn.addEventListener("click", function (e) {
         producto.style.borderColor = "";
         if (validar(descripcion)) {//validacion de input descripcion 
             descripcion.style.borderColor = "";
-            if (imagen.value != 0) {//validacion de imagen
-                imagen.style.borderColor = "";
+            if (image!=null) {//validacion de imagen
+                imagen.style.borderColor ="";
+       
                 //Crea el objeto servicio con id, nombre y descripcion
                 //let servicio = { "id": 0, "name": producto.value, "price": parseInt(precio.value), "description": descripcion.value, "Imagen": img }
                 // Agrega el objeto servicio a lista de servicios
@@ -37,8 +38,7 @@ submit_btn.addEventListener("click", function (e) {
                 //localStorage.setItem(key, JSON.stringify(listaServicios));
                 //Llama a la funcion preview para mostrar un preview de la card a mostrar
               
-                //AQUI SE ESTABLECE EL SCRIPT DE FETCH
-                 console.log(image);
+                //AQUI SE ESTABLECE EL SCRIPT DE FETCH		
                 const data = { servicio_nombre:producto.value , servicio_descripcion:descripcion.value,imagen: image};
 				fetch('/api/servicios/', {
 				 method: 'POST', // or 'PUT'
@@ -59,13 +59,33 @@ submit_btn.addEventListener("click", function (e) {
 							     showConfirmButton: false,
 							     color: 'black'
 							                })
+							      //Regresando todos los valores a vacio para nuevo servicio
+					            producto.value = "";
+					                descripcion.value = "";
+					                precio.value = ""
+					                imagen.value = null;
+					                img = "";
+					                prev.innerHTML = '';          
 										
-							}//if de validacion			
+							}else{
+								Swal.fire({
+			            title: 'Se requiere Iniciar Sesión',
+			             confirmButtonColor: 'black',
+  						cancelButtonColor: 'gray',
+			            confirmButtonText: `<a href="/pages/iniciarsesion.html">Iniciar sesión </a>`,
+			            cancelButtonText: 'Cancelar',
+			            showCancelButton: true,
+			            showCloseButton: true,
+			            isClicked: false,
+			            focusConfirm: true,
+			       		color:'black'
+			    	      })
+							}//if else  de validacion			
 										
-									  })
-									  .catch((error) => {
-									    console.error('Error:', error);
-									  });  
+						 })
+						 .catch((error) => {
+						console.error('Error:', error);
+						 });  
                 
 
                 //cambia el texto de la alerta 

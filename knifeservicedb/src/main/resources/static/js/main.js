@@ -4,6 +4,7 @@ let footer1 = document.getElementsByTagName("footer")[0];
 
 window.addEventListener("load", function (e) {
   if (sessionStorage.getItem('status') == null) {
+	localStorage.clear();
     navbar1.innerHTML = `
     <nav id="navbar" class="navbar" style="justify-content: center;">
 
@@ -22,9 +23,11 @@ window.addEventListener("load", function (e) {
      Sesión </span></button></li>
      </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
+	
 
+</nav>`
 
-</nav>`} else {
+} else {
     navbar1.innerHTML = `
 <nav id="navbar" class="navbar" style="justify-content: center;">
 
@@ -36,7 +39,7 @@ window.addEventListener("load", function (e) {
  <li><a class="nav-link" href="../pages/quienessomos.html" style="text-align:center;">Acerca de </br>Nosotros</a></li>
  <li><a class="nav-link" href="../pages/servicios.html">Servicios</a></li>
  <li><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
- <li><button onclick="sessionStorage.clear();document.location.reload(true)" type="button" class="btn btn-dark" style=" font-family:'Poppins', sans-serif;" id="logout"><span> Cerrar Sesión
+ <li><button onclick="sessionStorage.clear();localStorage.clear();document.location.reload(true)" type="button" class="btn btn-dark" style=" font-family:'Poppins', sans-serif;" id="logout"><span> Cerrar Sesión
  </span></button></li>
  </ul>
     <i class="bi bi-list mobile-nav-toggle"></i>

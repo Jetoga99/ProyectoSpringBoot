@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
 });
 
 const getData = () => {
-  let promesa = fetch("/api/servicios/", {
+  let promesa = fetch("/api/servicios/",{
     method: "GET"
   });
   promesa.then((response) => {
