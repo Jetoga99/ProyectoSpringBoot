@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="icon" href="../src/logo.ico">
+
+
+    <script src="https://kit.fontawesome.com/8a76b94897.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/fd5785194c.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="bodyregistro">
+    <header>
+        <main>
+            <div class="container" id="nav"></div>
+    </header><br>
+    <div class="container ">
+        <h1 class=" registroh1">Crea Tu Cuenta</h1>
+        <br>
+        <form class="offset-lg-3">
+            <div class="col-md-8 form-group ">
+                <label for="exampleInputEmail1"><i class="fa-solid fa-user"></i> Nombre Completo</label>
+
+                <input placeholder="Ingresa tu nombre y apellido" type="text" class="form-control" id="inputName"
+                    aria-describedby="emailHelp" />
+                <div id="nameAlert"></div>
+            </div>
+            <div class="form-group col-md-8 ">
+                <label for="exampleInputPassword1"><i class="fa-solid fa-phone"></i> Número de teléfono</label>
+                <input placeholder="Número a 10 dígitos" maxlength="10" , minlength="10" type="text"
+                    class="form-control" id="phoneNumber" />
+                <div id="PhoneAlert"></div>
+            </div>
+            <div class="form-group col-md-8 ">
+                <label for="exampleInputEmail1"><i class="fa-solid fa-envelope"></i> Dirección de correo
+                    electrónico</label>
+                <input placeholder="Dirección de correo electrónico " type="email" class="form-control" id="inputEmail"
+                    aria-describedby="emailHelp" />
+                <div id="EmailWarn"></div>
+            </div>
+            <div class="form-group col-md-8 ">
+                <label for="inputPassword1"><i class="fa-solid fa-lock"></i> Contraseña
+                </label>
+                <input placeholder="Crea una contraseña" minlength="5" type="password" class="form-control"
+                    id="inputPassword1" />
+                <div class="form-group ">
+                    <label for="inputPassword2"><i class="fa-solid fa-lock"></i> Confirmar Contraseña</label>
+                    <input placeholder="Confirma la Contraseña" maxlength="10" , minlength="5" type="password"
+                        class="form-control" id="inputPassword2" />
+                    <div class="" id="passwordAlert"></div>
+                </div>
+
+                <div class="btn " style="width: 100%;display: block;">
+                    <button id="btn_submit" type="submit">Crear Cuenta</button>
+                </div>
+
+            </div>
+        </form>
+
+
+    </div>
+    <br><br><br><br>
+    </main>
+    <footer class="footer">
+
+    </footer>
+    <script src="/js/registro.js"></script>
+
+    <script src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

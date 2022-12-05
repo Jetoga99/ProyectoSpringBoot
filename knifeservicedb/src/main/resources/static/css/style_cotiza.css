@@ -1,0 +1,122 @@
+/* fuente de letra para el navegador de google fons */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+/* fuente de letra para partrrafos y titulos y subtitulos de google fons */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+
+body {
+
+    background: rgba(217, 218, 220, 0.7);
+
+    /* 
+    animation-duration: 0.5s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    } */
+}
+
+/* aqui damos estilo al body e insertamos la animacion */
+
+
+nav a:hover {
+    background-color: rgb(9, 216, 40);
+    border-radius: 1em;
+}
+
+/* Aqui se le da el sombreado a la nav */
+
+
+/* aqui creamos una variable(root) de color para ahorrar tiempo de cambio */
+
+
+/* .formulario {
+    margin-top: 2em;
+
+    width: 100%;
+
+    background: rgba(217, 218, 220, 0.7);
+
+} */
+
+/* aqui se da el diseño del formulario de cotizacion */
+
+.subt {
+    margin-top: 2em;
+    padding: .5em;
+    width: 25%;
+
+
+}
+
+.cot {
+    margin-top: 2em;
+    padding: .5em;
+    width: 100%;
+
+}
+
+
+/* aqui perzonalizamos el estilo de la  etiqueta Section */
+
+
+.tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* aqui perzonalizamos el estilo de las cards */
+.warnings {
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: red;
+    padding-top: 20px;
+}
+
+/* aqui modificamos el titulo */
+.cotizah1 {
+    color: black;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 28px;
+}
+
+#btnCotiza {
+
+    padding: 10px 0;
+    color: white;
+    outline: none;
+    background-color: black;
+    border: 1px solid rgb(62, 60, 60);
+    width: 30%;
+    cursor: pointer;
+    border-radius: 15px;
+    min-width: max-content;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+#btnCotiza:hover {
+    background: white;
+    border: 1px solid transparent;
+    color: black;
+    box-shadow: 0 8px 32px 0 rgb(31, 38, 135, 0.37);
+    transition: .3s ease-in-out all;
+}
+
+/* aqui se modifica los elementos que contiene la etiqueta footer */
+
+
+/* aqui se inserta la imagen de la portada con la clase de portada */

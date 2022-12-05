@@ -1,6 +1,8 @@
 package com.knifeserviceit.knifeservicedb.service;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.knifeserviceit.knifeservicedb.model.Desarrollador;
@@ -38,24 +40,70 @@ public Desarrollador AddDeveloper(Desarrollador desarrollador){
 	return desarrolladorRepository.save(desarrollador);
 }//function that saves data from desarrollador table
 
-public Desarrollador updateDeveloper(Long Id , String Nombre, String Apellidos, String Email, String Contraseña, Long Proyecto_Id, Long tipo_Desarrollador) {
+public Desarrollador updateDeveloper(Long Id , String Nombre, String Apellidos, 
+		Long Proyecto_Id, Long tipo_Desarrollador) {
+	
 	Desarrollador tempdev = null;
 	if (desarrolladorRepository.existsById(Id)) {
 		tempdev = desarrolladorRepository.findById(Id).get();
 		if (Nombre!= null) tempdev.setNombre(Nombre);
 		if(Apellidos!=null) tempdev.setApellidos(Apellidos);
-		if(Email!=null) tempdev.setEmail(Email);
-		if(Contraseña!=null) tempdev.setContraseña(Contraseña);
 		if(Proyecto_Id != null) tempdev.setProyecto_Id(Proyecto_Id);
 		if(tipo_Desarrollador != null) tempdev.setTipo_desarrollador(tipo_Desarrollador);
 		desarrolladorRepository.save(tempdev);
-		
-		
-	}else {
+		}else {
 		System.out.println("update - El desarrollador con el Id: " + Id +" No esxiste en la base de datos");
 		
 	}//if exist 
 	return tempdev;
 	
 }//update developer data
+
+public boolean autenticador_dev(Desarrollador desa) {
+	boolean outcome = false ;
+	Optional<Desarrollador> developerByEmail = 
+	desarrolladorRepository.findByEmail(desa.getEmail());
+	
+	if (developerByEmail.isPresent()) {
+		Desarrollador dev = developerByEmail.get();
+		if (dev.getContraseña().equals(desa.getContraseña())) {
+			outcome = true;
+		}//if passwords are equals
+		
+	}
+	return outcome;
+}//fin clse de autenticador
+
+
+public boolean ExisteONo(Desarrollador desa) {
+	boolean outcome = false ;
+	Optional<Desarrollador> developerByEmail = 
+	desarrolladorRepository.findByEmail(desa.getEmail());
+	if (developerByEmail.isPresent()) {
+			outcome = true;
+	}
+	return outcome;
+}//fin clse de autenticador de existencia 
+
+
+
+
+public Desarrollador Change_Password(Long id, String Password, String NewPassword) {
+	     Desarrollador dev_per = null;
+	     if(desarrolladorRepository.existsById(id)) {
+			dev_per =desarrolladorRepository.findById(id).get();
+			if (( Password!=null)&&(NewPassword!=null)&&(dev_per.getContraseña().equals(Password))) {
+				dev_per.setContraseña(NewPassword);
+				desarrolladorRepository.save(dev_per);
+			}//validation passwords if
+		}//existence verification 
+	
+	     return dev_per;
+	
+}//class change password 
+
+
+
+
+
 }//DesarrolladorService close
